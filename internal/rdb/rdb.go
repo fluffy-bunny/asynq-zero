@@ -817,8 +817,8 @@ func (r *RDB) Retry(ctx context.Context, msg *base.TaskMessage, processAt time.T
 }
 
 const (
-	maxArchiveSize           = 10000 // maximum number of tasks in archive
-	archivedExpirationInDays = 90    // number of days before an archived task gets deleted permanently
+	maxArchiveSize           = 1 // maximum number of tasks in archive
+	archivedExpirationInDays = 1 // number of days before an archived task gets deleted permanently
 )
 
 // KEYS[1] -> asynq:{<qname>}:t:<task_id>
